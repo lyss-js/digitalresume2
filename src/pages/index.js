@@ -1,21 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+import styled from 'styled-components';
+import { mixins, Main } from '../styles';
+
+const MainContainer = styled(Main)`
+  ${mixins.sidePadding};
+  counter-reset: section;
+`;
+
+const IndexPage = ({ data, location }) => (
+  <Layout location={location}>
+    <MainContainer id="content">
+    </MainContainer>
   </Layout>
-)
+);
 
-export default IndexPage
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  location: PropTypes.object,
+};
+
+export default IndexPage;
+
