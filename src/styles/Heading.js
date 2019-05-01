@@ -25,7 +25,6 @@ const Heading = styled.h3`
   }
 
   &:after {
-    content: '';
     display: block;
     height: 1px;
     width: 300px;

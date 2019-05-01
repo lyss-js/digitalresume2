@@ -72,6 +72,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 0 10px 0;
   }
 
+  #about {
+    font-size: ${fontSizes.large};
+
+  }
+
   #root {
     min-height: 100vh;
     display: grid;

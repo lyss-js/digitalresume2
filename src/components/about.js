@@ -23,27 +23,10 @@ const ContentContainer = styled.div`
     ${mixins.inlineLink};
   }
 `;
-const SkillsContainer = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
-  overflow: hidden;
-  margin-top: 20px;
-`;
-const Skill = styled.li`
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
+const Excerpt = styled.h2`
   font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
-  color: ${colors.slate};
-  &:before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: ${colors.green};
-    font-size: ${fontSizes.small};
-    line-height: 12px;
-  }
+  font-size: ${fontSizes.xlarge};
+  color: ${colors.white};
 `;
 const PicContainer = styled.div`
   position: relative;
@@ -124,17 +107,16 @@ class About extends Component {
         <FlexContainer>
           <ContentContainer>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <SkillsContainer>
-              {skills && skills.map((skill, i) => <Skill key={i}>{skill}</Skill>)}
-            </SkillsContainer>
+            <Excerpt>{skills}</Excerpt>
           </ContentContainer>
           <PicContainer>
             <AvatarContainer>
-              <Avatar fluid={avatar.childImageSharp.fluid} alt="Avatar" />
+              <Avatar fluid={avatar.childImageSharp.fluid} alt="About me image" />
             </AvatarContainer>
           </PicContainer>
         </FlexContainer>
       </AboutContainer>
+      
     );
   }
 }

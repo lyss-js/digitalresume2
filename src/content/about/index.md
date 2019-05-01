@@ -1,10 +1,9 @@
 ---
 title: 'About Me'
 avatar: './resume-pic.png'
+skills: 'Design + Code = Love'
 ---
 
-Hello! I'm Brittany, a software engineer based in Boston, MA who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
+I'm a 23 year old front-end engineer living in New York City. I have a deep passion for anything and everything tech and I use that passion to fuel my drive to create seamless web applications that help solve complex problems.
 
-Shortly after graduating from [Northeastern University](https://www.ccis.northeastern.edu/), I joined the engineering team at [Upstatement](https://www.upstatement.com/) where I work on a wide variety of interesting and meaningful projects on a daily basis.
-
-Here's a few technologies I've been working with recently:
+I began my career as a user-interface designer. However, I quickly developed an interest in being able to build my own apps based on my designs, so I began working with common front-end frameworks such as React and Angular. From there, I realized that I absolutely love combining my eye for art and creativity with the analytical and programmatic side of my brain. 
