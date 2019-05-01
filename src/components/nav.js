@@ -17,7 +17,7 @@ const NavContainer = styled.header`
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.white};
+  background-color: ${colors.dark};
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -25,11 +25,7 @@ const NavContainer = styled.header`
   user-select: auto !important;
   width: 100%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
-  box-shadow: ${props =>
-    props.scrollDirection === 'up' ? `0 2px 4px ${colors.shadowNavy}` : 'none'};
-  transform: translateY(
-    ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
-  );
+  box-shadow: 0px 0px 10px #000000;
   ${media.desktop`padding: 0 40px;`};
   ${media.tablet`padding: 0 25px;`};
 `;
@@ -37,7 +33,7 @@ const Navbar = styled.nav`
   ${mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: ${colors.darkGrey};
+  color: ${colors.white};
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   counter-reset: item 0;
   z-index: 12;
@@ -129,7 +125,7 @@ const NavListItem = styled.li`
   font-size: ${fontSizes.smallish};
   &:before {
     text-align: right;
-    color: ${colors.green};
+    color: ${colors.white};
     font-size: ${fontSizes.smallish};
 }
 `;
