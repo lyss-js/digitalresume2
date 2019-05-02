@@ -5,11 +5,16 @@ cover: './zuul.png'
 github: 'https://github.com/bchiang7/halcyon-site'
 external: 'https://halcyon-theme.netlify.com/'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
+  - HTML
+  - CSS3
+  - JavaScript
+  - ReactJs
+  - Redux
+  - Springboot MVC
+  - Postgres
+  - Node.js
+  - Docker
+  - AWS
 show: 'true'
 ---
 
