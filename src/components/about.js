@@ -27,6 +27,19 @@ const Excerpt = styled.h2`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.xlarge};
   color: ${colors.white};
+  transition: ${theme.transition};
+  &:hover {
+    letter-spacing: 1.9px;
+  }
+  &:after {
+    transition: ${theme.transition};
+  }
+`;
+const SkillsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  overflow: hidden;
+  margin-top: 20px;
 `;
 const PicContainer = styled.div`
   position: relative;

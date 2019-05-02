@@ -1,0 +1,11 @@
+hr {
+    color: #acb4bc;
+    border: solid 1px;
+    opacity: 0.5;
+    margin-top: 1%;
+}
+
+.icon {
+    width: 20% !important; 
+    height: 20% !important;  
+}

@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import About from '../components/about';
-
-
+import Skills from '../components/skills'
+import Projects from '../components/projects'
 import styled from 'styled-components';
 import { mixins, Main } from '../styles';
 
@@ -20,7 +20,8 @@ const IndexPage = ({ data, location }) => (
     <MainContainer id="content">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
-
+      <Skills data={data.skills.edges} />
+      <Projects data={data.projects.edges} />
     </MainContainer>
   </Layout>
 );
@@ -59,6 +60,40 @@ export const query = graphql`
               }
             }
             skills
+          }
+          html
+        }
+      }
+    }
+    skills: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skills/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+          html
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            tech
+            github
+            external
+            show
           }
           html
         }
